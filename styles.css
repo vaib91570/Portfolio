@@ -19,7 +19,7 @@ body.light-theme {
     color: #333;
 }
 
-/* Navigation */
+/* General Navigation Styles */
 nav {
     background-color: #252526;
     padding: 20px;
@@ -28,12 +28,39 @@ nav {
     align-items: center;
 }
 
-.nav-title {
-    color: #569cd6;
-    font-weight: bold;
-    font-size: 1.5em;
+/* Mobile Navbar */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-title {
+        font-size: 1.5em;
+    }
+
+    ul {
+        width: 100%;
+        display: none; /* Hide links initially */
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    ul li {
+        margin: 10px 0;
+    }
+
+    ul.show {
+        display: flex; /* Show links when toggled */
+    }
+
+    .menu-icon {
+        cursor: pointer;
+        display: block;
+    }
 }
 
+/* Navbar links */
 ul {
     list-style: none;
     display: flex;
@@ -52,6 +79,19 @@ a {
 
 a:hover {
     color: #569cd6;
+}
+
+/* Hamburger icon */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #dcdcaa;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
 }
 
 /* Hero Section */
@@ -87,7 +127,6 @@ a:hover {
 .cta-button:hover {
     background-color: #f0a500;
 }
-
 /* About Section */
 #about {
     padding: 60px 20px;
@@ -111,7 +150,7 @@ a:hover {
 .about-content p {
     font-size: 1.2em;
     line-height: 1.6;
-    color: #dcdcdc;
+    color: #dcdcfc;
 }
 
 .highlight {
@@ -122,6 +161,55 @@ h3 {
     margin-top: 30px;
     color: #9cdcfe;
 }
+
+/* Skills and Interests Lists */
+.skills-list, .interests-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.skills-list li, .interests-list li {
+    font-size: 1.1em;
+    color: #dcdcaa;
+    margin-bottom: 10px;
+}
+
+.skills-list li::before {
+    content: "✔️ ";
+    color: #ffb86c;
+}
+
+.interests-list li::before {
+    content: "🔸 ";
+    color: #ffb86c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Adjust layout for smaller screens */
+    #about {
+        padding: 40px 15px;
+    }
+
+    #about h2 {
+        font-size: 2em;
+    }
+
+    .about-content {
+        padding: 0 15px;
+        text-align: center; /* Center text for mobile */
+    }
+
+    .about-content p {
+        font-size: 1.1em; /* Adjust font size for smaller screens */
+    }
+
+    .skills-list li, .interests-list li {
+        font-size: 1em; /* Adjust list item font size */
+    }
+}
+
 
 /* Skills and Interests Lists */
 .skills-list, .interests-list {
