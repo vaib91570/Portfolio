@@ -3,158 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaibhav Makwana - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Terminal Navigation -->
-    <nav>
-        <div class="nav-title">>_ Vaibhav.dev</div>
-        <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</li>
-        </ul>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm <span class="highlight">Vaibhav Makwana</span></h1>
-            <p class="console-text" id="console-text"></p>
-            <a href="#projects" class="cta-button">Explore My Work</a>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="intro">
+        <div class="intro-text">
+            <h1>Hello, It's Me<br><span>Vaibhav Makwana</span><br>And I'm a <span class="typing-animation">Entrepreneur</span></h1>
+            <p>I'm a passionate web designer and developer, constantly learning and exploring the art of crafting and designing websites, frontend development, and creating impactful digital solutions that inspire and innovate!</p>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <a href="#about" class="btn">More About Me</a>
+        </div>
+        <div class="intro-image">
+            <img src="1F8A0448.JPG" alt="Vaibhav Makwana">
         </div>
     </section>
 
-    <!-- About Section -->
-<section id="about">
-    <div class="container">
-        <h2>About Me</h2>
-        <img src="1F8A0448.JPG" alt="Vaibhav Makwana s." class="about-photo">
-        <div class="about-content">
-            <p>Hello! I'm <span class="highlight">Vaibhav Makwana</span>, a passionate <strong>Entrepreneur & Developer</strong> with a strong interest in technology, innovation, and sustainable solutions. I believe in the power of software to create meaningful impact and drive change.</p>
-            
-            <h3>Skills & Technologies</h3>
-            <ul class="skills-list">
-                <li>JavaScript</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>React</li>
-                <li>MongoDB</li>
-                <li>Node.js</li>
-            </ul>
-            
-            <h3>Interests</h3>
-            <ul class="interests-list">
-                <li>Tech Innovations</li>
-                <li>Sustainable Solutions</li>
-                <li>Crypto Analysis</li>
-            </ul>
-            <div class="education">
-                <h3>Education</h3>
-                <ul>
-                    <li><strong>B.Tech in Information Technology</strong> - Gyanmanjari &nbsp; Institute of Technology, Bhavnagar <br>(2024 - Present)</li>
-                    <li><strong>Diploma in Information Technology</strong> - Sir B.P.T.I. College, Bhavnagar <br>(2022 - 2024)</li>
-                    <li><strong>School 1 To 10<sup>th</sup></strong> - Shree <br>Swaminarayan Gurukul Chitra (2011 - 2022)</li>
-                </ul>
+    <section class="about" id="about">
+        <div class="about-image">
+            <img src="1F8A0448.JPG" alt="Vaibhav Makwana">
+        </div>
+        <div class="about-text">
+            <h2>About <span>Me</span></h2>
+            <h3>Entrepreneur & Developer!</h3>
+            <p>
+                I am a passionate Entrepreneur and Developer with a strong interest in technology and innovation. Although I’m still building my experience, I’m focused on creating impactful websites and learning the latest design trends. My aim is to combine creativity and technical skills to design visually appealing, user-friendly, and innovative digital solutions. As I continue to grow in my career, I’m excited to deepen my understanding of UX and UI principles and contribute to meaningful projects...
+            </p>
+            <a href="#projects" class="btn">More About Me</a>
+        </div>
+    </section>
+
+    <div class="skills-section" id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skill-bar">
+            <p>HTML</p>
+            <div class="progress">
+                <div class="progress-done" data-done="90"></div>
+            </div>
+        </div>
+    
+        <div class="skill-bar">
+            <p>CSS</p>
+            <div class="progress">
+                <div class="progress-done" data-done="80"></div>
+            </div>
+        </div>
+    
+        <div class="skill-bar">
+            <p>Javascript</p>
+            <div class="progress">
+                <div class="progress-done" data-done="75"></div>
+            </div>
+        </div>
+    
+        <div class="skill-bar">
+            <p>Python</p>
+            <div class="progress">
+                <div class="progress-done" data-done="50"></div>
+            </div>
+        </div>
+    
+        <div class="skill-bar">
+            <p>React</p>
+            <div class="progress">
+                <div class="progress-done" data-done="45"></div>
+            </div>
+        </div>
+    
+        <h2>Professional Skills</h2>
+        <div class="circular-skills">
+            <div class="circle" data-percent="90">
+                <div class="inner-circle">90%</div>
+                <p>Creativity</p>
+            </div>
+    
+            <div class="circle" data-percent="70">
+                <div class="inner-circle">70%</div>
+                <p>Communication</p>
+            </div>
+    
+            <div class="circle" data-percent="85">
+                <div class="inner-circle">85%</div>
+                <p>Problem Solving</p>
+            </div>
+    
+            <div class="circle" data-percent="75">
+                <div class="inner-circle">75%</div>
+                <p>Teamwork</p>
             </div>
         </div>
     </div>
-</section>
-
-
-    <!-- Projects Section -->
+    
     <section id="projects">
-        <h2 style=" color: #ffb86c;">Projects</h2>
-        <div class="project-grid">
-            <div class="project-card" onclick="openModal('cng')">
-                <h3>CNG Compliance Software</h3>
-                <p>Ensuring vehicle safety through digital compliance checks.</p>
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <!-- ChillCoolCharge (Insulin Cooler) -->
+            <div class="project-box">
+                <h3>ChillCoolCharge (Insulin Cooler)</h3>
+                <p>This project is an insulin cooler designed like a power bank. It is created by ChillSafe Enterprises to provide a portable solution for storing insulin at a safe temperature during travel.</p>
             </div>
-            <div class="project-card" onclick="openModal('crypto')">
-                <h3>Crypto Tracker</h3>
-                <p>Real-time tracking of cryptocurrencies.</p>
+    
+            <!-- CNG Compliance Verification Software -->
+            <div class="project-box">
+                <h3>CNG Compliance Verification Software</h3>
+                <p>This software solution checks whether CNG tanks in vehicles have been tested. It is used at CNG gas stations to ensure compliance with safety standards and includes features like traffic data, available fuel types, and more.</p>
             </div>
-            <div class="project-card" onclick="openModal('typing-game')">
-                <h3>Interactive Typing Game</h3>
-                <p>Gamified learning with falling words and leaderboard integration.</p>
-            </div>
-            <div class="project-card" onclick="openModal('ecommerce')">
-                <h3>E-commerce Website</h3>
-                <p>Features like product management, admin panel, and cart functionality.</p>
-            </div>
-            <div class="project-card" onclick="openModal('voip')">
+    
+            <!-- VoIP Call Project -->
+            <div class="project-box">
                 <h3>VoIP Call Project</h3>
-                <p>Built using the MERN stack, Vite, and TailwindCSS.</p>
+                <p>Based on the MERN stack, Vite, and TailwindCSS, this project is an extension of an existing chat app to integrate VoIP calling functionality. It offers seamless communication over the internet.</p>
             </div>
-            <div class="project-card" onclick="openModal('portfolio')">
+    
+            <!-- Crypto Project -->
+            <div class="project-box">
+                <h3>Crypto Project</h3>
+                <p>This crypto project displays real-time data of cryptocurrencies. It includes features like the top gained and lost cryptocurrencies of the day, and users can view live prices and trends.</p>
+            </div>
+    
+            <!-- Interview Allocation System -->
+            <div class="project-box">
+                <h3>Interview Allocation System</h3>
+                <p>This system allocates the right candidate for an interview based on their qualifications and the job role. It helps streamline the recruitment process for employers.</p>
+            </div>
+    
+            <!-- Typing Game Project -->
+            <div class="project-box">
+                <h3>Interactive Typing Game</h3>
+                <p>An interactive typing game with multiple difficulty levels, leaderboards, sound effects, multiplayer functionality, and more. It’s designed for all ages and helps improve typing speed and accuracy.</p>
+            </div>
+    
+            <!-- Portfolio Website -->
+            <div class="project-box">
                 <h3>Portfolio Website</h3>
-                <p>Professional, unique developer-themed portfolio.</p>
+                <p>This is my personal portfolio website. It includes all my projects, experiences, and skills, designed with a modern and professional theme to showcase my work.</p>
+            </div>
+    
+            <!-- Accident Detection System -->
+            <div class="project-box">
+                <h3>Accident Detection System</h3>
+                <p>This project detects car accidents and automatically calls nearby ambulance and police stations. It also sends notifications to the user's phone to alert them about the incident.</p>
+            </div>
+    
+            <!-- Family Quest Website -->
+            <div class="project-box">
+                <h3>Family Quest: Adventure for All Ages</h3>
+                <p>A fun and engaging website designed for parents and kids to bond through shared quests, challenges, and activities. It aims to provide an interactive and educational experience.</p>
             </div>
         </div>
     </section>
-
-   <!-- Contact Section -->
-<section id="contact">
-    <h2 style=" color: #ffb86c; text-align: center;">Contact Me</h2>
-    <form id="contact-form" action="contact-form-handler.php" method="POST">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Your Email" required>
-        <textarea id="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-    </form>
-</section>
-
-<!-- Add EmailJS Script -->
-<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
-<script>
-    // Initialize EmailJS
-    (function(){
-        emailjs.init('YOUR_USER_ID'); // Replace with your EmailJS User ID
-    })();
-
-    // Handle Form Submission
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();  // Prevent the default form submission
-        
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        // Send the email using EmailJS
-        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-            from_name: name,
-            from_email: email,
-            message: message
-        })
-        .then(function(response) {
-            alert('Message sent successfully!');
-            document.getElementById('contact-form').reset();  // Reset form after successful submission
-        }, function(error) {
-            alert('Failed to send message. Please try again.');
-        });
-    });
-</script>
-
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Vaibhav Makwana | Developer Portfolio</p>
-    </footer>
-
-    <!-- Modal for Project Details -->
-    <div id="project-modal" class="modal">
-        <div class="modal-content" id="modal-body">
-            <span class="close-btn" onclick="closeModal()">✖</span>
+    
+    
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2>Contact <span>Me</span></h2>
+                <p>Let's Work Together</p>
+                <p>I am excited about the opportunity to collaborate on your project. If you have any questions or need help turning your ideas into reality, feel free to reach out...</p>
+                <p><strong>Email:</strong> vaibhavmakwana9979@gmail.com</p>
+                <p><strong>Phone:</strong> 9157027713</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="#">
+                    <input type="text" placeholder="Enter Your Name" required>
+                    <input type="email" placeholder="Enter Your Email" required>
+                    <input type="text" placeholder="Enter Your Subject" required>
+                    <textarea placeholder="Enter Your Message" required></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
         </div>
-    </div>
-
-    <!-- JavaScript -->
-    <script src="scripts.js"></script>
+    </section>
+    
+    <script src="script.js"></script>
 </body>
 </html>
