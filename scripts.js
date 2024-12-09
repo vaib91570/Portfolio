@@ -1,73 +1,69 @@
-// Open Modal Function for Project Details
-function openModal(project) {
-    const modal = document.getElementById("project-modal");
-    const modalBody = document.getElementById("modal-body");
-    
-    const projectDescriptions = {
-        ecommerce: `
-            <h3>E-commerce Website</h3>
-            <p>This project involves creating an e-commerce website with features like product management, an admin panel for managing sellers and products, and shopping cart functionality.</p>
-        `,
-        voip: `
-            <h3>VoIP Call Project</h3>
-            <p>This VoIP call project uses the MERN stack, Vite, and TailwindCSS to create a modern and scalable platform for voice and video calling.</p>
-        `,
-        crypto: `
-            <h3>Crypto Project</h3>
-            <p>Real-time cryptocurrency platform with login, sign-up functionalities, and market tracking features.</p>
-        `,
-        portfolio: `
-            <h3>Portfolio Website</h3>
-            <p>Professional, unique developer-themed portfolio showcasing projects and skills.</p>
-        `,
-        interview: `
-            <h3>Interview Allocation System</h3>
-            <p>System designed for efficient allocation of candidates to interview panels.</p>
-        `,
-        "typing-game": `
-            <h3>Interactive Typing Game</h3>
-            <p>Gamified typing experience with multiple difficulty levels, sound effects, and leaderboards.</p>
-        `,
-        cng: `
-            <h3>CNG Compliance Verification Software</h3>
-            <p>Startup project ensuring CNG tank compliance with fuel station management features.</p>
-        `
-    };
-
-    modalBody.innerHTML = projectDescriptions[project];
-    modal.style.display = "block";
-}
-
-// Close Modal Function
-function closeModal() {
-    const modal = document.getElementById("project-modal");
-    modal.style.display = "none";
-}
-
-// Close Modal When Clicking Outside
-window.onclick = function(event) {
-    const modal = document.getElementById("project-modal");
-    if (event.target === modal) {
-        closeModal();
+document.addEventListener("DOMContentLoaded", function () {
+    const words = ["Entrepreneur","Web Designer", "Frontend Developer",];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let currentWord = '';
+    const typingSpeed = 100;
+    const erasingSpeed = 50;
+    const newWordDelay = 2000;
+  
+    function type() {
+        if (charIndex < words[wordIndex].length) {
+            currentWord += words[wordIndex].charAt(charIndex);
+            document.querySelector('.typing-animation').textContent = currentWord;
+            charIndex++;
+            setTimeout(type, typingSpeed);
+        } else {
+            setTimeout(erase, newWordDelay);
+        }
     }
-}
-
-// Check and apply the saved theme preference on page load
-window.onload = function() {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        document.body.classList.add(savedTheme);
-        document.getElementById('theme-toggle').textContent = savedTheme === 'dark-theme' ? '🌙' : '☀️';
+  
+    function erase() {
+        if (charIndex > 0) {
+            currentWord = currentWord.slice(0, -1);
+            document.querySelector('.typing-animation').textContent = currentWord;
+            charIndex--;
+            setTimeout(erase, erasingSpeed);
+        } else {
+            wordIndex = (wordIndex + 1) % words.length;
+            setTimeout(type, typingSpeed + 1100);
+        }
     }
-}
-
-function toggleTheme() {
-    const body = document.body;
-    const themeIcon = document.getElementById('theme-toggle');
-    
-    body.classList.toggle('light-theme');
-    const currentTheme = body.classList.contains('light-theme') ? 'light-theme' : 'dark-theme';
-    localStorage.setItem('theme', currentTheme); // Save preference
-    
-    themeIcon.textContent = currentTheme === 'dark-theme' ? '🌙' : '☀️';
-}
+  
+    type();
+  });
+  
+  
+  
+  // Animate progress bars
+  const progressBars = document.querySelectorAll('.progress-done');
+  
+  progressBars.forEach(bar => {
+      setTimeout(() => {
+          bar.style.width = bar.getAttribute('data-done') + '%';
+          bar.style.opacity = 1;
+      }, 500);
+  });
+  
+  // Animate circular skills
+  const circles = document.querySelectorAll('.circle');
+  
+  circles.forEach(circle => {
+      let percent = circle.getAttribute('data-percent');
+      circle.style.setProperty('--percent', percent);
+  });
+  // Example for making the navigation link active on scroll
+document.addEventListener('scroll', function () {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+  
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 0 && rect.bottom >= 0) {
+        navLinks.forEach(link => link.classList.remove('active'));
+        const activeLink = document.querySelector(`a[href="#${section.id}"]`);
+        activeLink.classList.add('active');
+      }
+    });
+  });
+  
