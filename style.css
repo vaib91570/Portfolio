@@ -523,3 +523,26 @@ h2 {
 .contact-form .btn:hover {
   background-color: #00cce7;
 }
+
+.circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(#00f0ff var(--percent), #09131c 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #09131c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
