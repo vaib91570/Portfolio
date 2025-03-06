@@ -279,8 +279,6 @@ nav ul li a {
   background-color: #00cce7;
 }
 
-
-
 .skills-section {
   width: 80%;
   margin: auto;
@@ -418,69 +416,178 @@ h2 {
   color: #555;
   line-height: 1.6;
 }
-
 /* Responsive Design */
-@media (max-width: 768px) {
-  
-  .intro{
-    display: grid;
+@media (max-width: 1024px) {
+  .intro, .about {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .intro-text, .about-text {
+    max-width: 100%;
   }
 
   .intro-image{
     display: none;
   }
-
-  .intro-text{
-    margin-top: 50px;
-  }
   
-  .about{
-    display: grid;
+  .about-image {
+    width: 300px;
+    height: 300px;
   }
-
-  .circular-skills{
-    display: grid;
-  }
-  
+/*
   .cir1{
-    padding-top: 50%;
+    padding-top: 30%;
+  }
+*/ 
+  .cir2{
+    padding-top: 30%;
+  }
+ 
+  .cir3{
+    padding-top: 30%;
+  }
+  /*
+  .cir4{
+    padding-top: 30%;
+  } 
+
+*/ 
+  .services-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .service-box {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .intro, .about {
+    padding: 30px 10px;
+  }
+
+  .intro-text h1, .about-text h2 {
+    font-size: 32px;
+  }
+
+  .intro-text p, .about-text p {
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+  }
+
+  .intro-image, .about-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  /* .cir1{
+    padding-top: 30%;
   }
 
   .cir2{
-    padding-top: 50%;
+    padding-top: 30%;
   }
 
   .cir3{
-    padding-top: 50%;
+    padding-top: 30%;
   }
 
   .cir4{
-    padding-top: 50%;
+    padding-top: 30%;
+  } */
+  .contact-content {
+    flex-direction: column;
   }
-  
-  .contact{
-  display: block;
+
+  .contact-info, 
+.contact-form {
+    width: 100%;
   }
-  
-  .contact .contact-info{
-    display: block;
+
+  .contact-form {
+    max-width: 90%;
   }
-  #projects h2 {
-    font-size: 28px;
+  .services {
+    padding: 50px 10px;
+  }
+
+  .service-box {
+    width: 100%;
   }
 
   .projects-container {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .project-box h3 {
-    font-size: 20px;
-  }
-
-  .project-box p {
-    font-size: 14px;
+    grid-template-columns: 1fr;
+    padding: 10px;
   }
 }
+
+@media (max-width: 480px) {
+  .intro-text h1, .about-text h2 {
+    font-size: 28px;
+  }
+
+  .intro-text p, .about-text p {
+    font-size: 14px;
+  }
+
+  .intro-image, .about-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  /* .cir1{
+    padding-top: 30%;
+  }
+
+  .cir2{
+    padding-top: 30%;
+  }
+
+  .cir3{
+    padding-top: 30%;
+  }
+
+  .cir4{
+    padding-top: 30%;
+  } */
+
+  .service-box {
+    padding: 20px;
+  }
+
+  .projects-container {
+    padding: 5px;
+  }
+}
+
 
 .contact {
   padding: 100px 80px;
